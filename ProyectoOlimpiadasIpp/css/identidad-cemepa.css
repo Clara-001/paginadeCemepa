@@ -1,0 +1,57 @@
+body {
+  background-image:
+    linear-gradient(rgb(40 30 13 / 60%), rgb(40 30 13 / 60%)),
+    url("../imagenesc01-10-26/fachada%20del%20cemepa.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.marca-cemepa {
+  display: flex;
+  margin-left: 0;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.marca-cemepa img {
+  width: auto;
+  height: auto;
+  max-width: 3rem;
+  max-height: 3rem;
+  flex: none;
+  background-color: #fff;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.texto-marca {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.texto-marca strong {
+  color: var(--color-acento);
+  font-size: 1.3rem;
+  letter-spacing: 0.09em;
+}
+
+.texto-marca span {
+  color: #fff8e7;
+}
+
+@media (max-width: 700px) {
+  .marca-cemepa img {
+    max-width: 2.4rem;
+    max-height: 2.4rem;
+  }
+
+  .texto-marca span {
+    display: none;
+  }
+}

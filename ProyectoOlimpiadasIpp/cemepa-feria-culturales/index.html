@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="CEMEPA: Centro Municipal de Educación por el Arte de Caleta Olivia."
+  >
+
+  <title>Inicio | CEMEPA Caleta Olivia</title>
+
+  <link rel="stylesheet" href="../css/estilos.css">
+  <link rel="stylesheet" href="../css/identidad-cemepa.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <header class="encabezado-principal">
+    <div class="contenedor-header">
+      <a class="marca-cemepa" href="index.html">
+        <img
+          src="../imagenesc01-10-26/Logo%20Cemepa.jpg"
+          alt="Logo del CEMEPA"
+        >
+
+        <div class="texto-marca">
+          <strong>CEMEPA</strong>
+          <span>Centro Municipal de Educación por el Arte</span>
+        </div>
+      </a>
+
+      <button
+        class="boton-menu"
+        id="boton-menu"
+        type="button"
+        aria-label="Abrir menú de navegación"
+        aria-controls="menu-principal"
+        aria-expanded="false"
+      >
+        Menú
+      </button>
+
+      <nav id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="talleres.html">Talleres</a></li>
+          <li><a href="agenda.html">Agenda y ferias</a></li>
+          <li><a href="profesorados.html">Formación profesional</a></li>
+          <li><a href="preinscripcion.html">Preinscripción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="inicio" aria-labelledby="titulo-inicio">
+      <div class="contenedor-inicio">
+        <div class="contenido-inicio">
+          <p class="etiqueta-inicio">Arte, educación y comunidad</p>
+
+          <h1 id="titulo-inicio">
+            Centro Municipal de Educación por el Arte
+          </h1>
+
+          <p class="descripcion-inicio">
+            El CEMEPA, espacio clave de Caleta Olivia, brinda educación artística
+            pública a más de 1.600 personas de todas las edades. Ofrece escuelas
+            de danza, música, teatro y artes plásticas, profesorados de tres años
+            y talleres variados desde los 4 años. Cuenta con instalaciones
+            renovadas, horarios flexibles y espacios para eventos como el Festival
+            Provincial de Teatro. Pese a dificultades con la ampliación de
+            instalaciones y recursos, sigue siendo un referente que usa el arte
+            para la inclusión y transformación social.
+          </p>
+
+          <a class="boton-inicio" href="talleres.html">
+            Conocé nuestros talleres
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor-footer">
+      <p>
+        &copy; 2026 CEMEPA — Centro Municipal de Educación por el Arte.
+        Caleta Olivia, Santa Cruz, Argentina.
+      </p>
+
+      <div class="redes-sociales" aria-label="Redes sociales">
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://x.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const botonMenu = document.querySelector("#boton-menu");
+      const menuNavegacion = document.querySelector("#menu-principal");
+
+      if (botonMenu && menuNavegacion) {
+        botonMenu.addEventListener("click", () => {
+          const menuAbierto = menuNavegacion.classList.toggle("abierto");
+
+          botonMenu.setAttribute("aria-expanded", String(menuAbierto));
+
+          botonMenu.textContent = menuAbierto
+            ? "Cerrar menú"
+            : "Menú";
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

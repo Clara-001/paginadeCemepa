@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Talleres, propuestas artísticas y formación profesional del CEMEPA de Caleta Olivia, Santa Cruz."
+  >
+
+  <title>Talleres | CEMEPA Caleta Olivia</title>
+
+  <link rel="stylesheet" href="../css/talleres.css">
+  <link rel="stylesheet" href="../css/identidad-cemepa.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <!-- ==================== ENCABEZADO ==================== -->
+
+  <header class="encabezado-principal">
+    <div class="contenedor-header">
+      <a class="marca-cemepa" href="index.html">
+        <img src="../imagenesc01-10-26/Logo%20Cemepa.jpg" alt="Logo del CEMEPA">
+        <div class="texto-marca">
+          <strong>CEMEPA</strong>
+          <span>Centro Municipal de Educación por el Arte</span>
+        </div>
+      </a>
+
+      <button
+        class="boton-menu"
+        id="boton-menu"
+        type="button"
+        aria-label="Abrir menú de navegación"
+        aria-controls="menu-principal"
+        aria-expanded="false"
+      >
+        Menú
+      </button>
+
+      <nav id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="talleres.html" aria-current="page">
+              Talleres
+            </a>
+          </li>
+          <li><a href="agenda.html">Agenda y ferias</a></li>
+          <li><a href="profesorados.html">Formación profesional</a></li>
+          <li><a href="preinscripcion.html">Preinscripción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== CONTENIDO ==================== -->
+
+  <main>
+
+    <section class="presentacion" aria-labelledby="titulo-talleres">
+      <div class="contenedor">
+        <p class="etiqueta-presentacion">Arte, cultura y comunidad</p>
+
+        <h1 id="titulo-talleres">Talleres y propuestas artísticas</h1>
+
+        <p>
+          En el CEMEPA de Caleta Olivia ofrecemos espacios de formación,
+          encuentro y expresión para niñas, niños, adolescentes y personas adultas.
+          Conocé los talleres disponibles y elegí la propuesta que mejor se adapte
+          a tus intereses.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== FILTROS ==================== -->
+
+    <section class="seccion-filtros" aria-labelledby="titulo-filtros">
+      <div class="contenedor">
+        <h2 id="titulo-filtros">Buscá un taller</h2>
+
+        <form id="formulario-filtros">
+          <fieldset>
+            <legend>Filtrá las actividades por disciplina y edad</legend>
+
+            <div class="campo-filtro">
+              <label for="disciplina">Disciplina</label>
+
+              <select id="disciplina" name="disciplina">
+                <option value="todas">Todas las disciplinas</option>
+                <option value="danzas">Danzas</option>
+                <option value="musica">Música</option>
+                <option value="teatro">Teatro</option>
+                <option value="pintura">Pintura</option>
+                <option value="dibujo">Dibujo</option>
+                <option value="grabado">Grabado</option>
+                <option value="ilustracion">Ilustración</option>
+                <option value="animacion">Animación</option>
+                <option value="fotografia">Fotografía</option>
+                <option value="artes-aplicadas">Artes aplicadas</option>
+              </select>
+            </div>
+
+            <div class="campo-filtro">
+              <label for="edad">Edad</label>
+
+              <select id="edad" name="edad">
+                <option value="todas">Todas las edades</option>
+                <option value="4-6">4 a 6 años</option>
+                <option value="7-12">7 a 12 años</option>
+                <option value="13-17">13 a 17 años</option>
+                <option value="18+">18 años o más</option>
+              </select>
+            </div>
+
+            <div class="campo-filtro campo-boton">
+              <button type="button" id="limpiar-filtros">
+                Limpiar filtros
+              </button>
+            </div>
+          </fieldset>
+        </form>
+
+        <p id="resultado-filtros" aria-live="polite">
+          Se muestran todos los talleres disponibles.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== CATÁLOGO ==================== -->
+
+    <section class="catalogo-talleres" aria-labelledby="titulo-catalogo">
+      <div class="contenedor">
+        <h2 id="titulo-catalogo">Catálogo de actividades</h2>
+
+        <!-- ==================== DANZAS ==================== -->
+
+        <section class="categoria" aria-labelledby="titulo-danzas">
+          <h2 id="titulo-danzas">Danzas</h2>
+
+          <p>
+            Propuestas de danza tradicional, clásica y contemporánea para
+            distintas edades.
+          </p>
+
+          <section class="subcategoria" aria-labelledby="titulo-folclore">
+            <h3 id="titulo-folclore">Danzas folclóricas</h3>
+
+            <div class="talleres">
+
+              <article
+                class="taller"
+                data-disciplina="danzas"
+                data-edad="13-17"
+                data-concepto="El folclore argentino reúne músicas, danzas y costumbres transmitidas entre generaciones, que expresan la identidad y la diversidad cultural de las distintas regiones del país."
+              >
+                <img class="imagen-taller" src="../imagenesc01-10-26/folclore%20argentino.jpg" alt="Taller de folclore argentino" loading="lazy" decoding="async">
+                <h4>Folclore argentino</h4>
+
+                <ul>
+                  <li><strong>Edad:</strong> 13 a 17 años</li>
+                  <li><strong>Día:</strong> Lunes</li>
+                  <li><strong>Horario:</strong> 16:00 h</li>
+                  <li><strong>Duración:</strong> 1 hora</li>
+                  <li><strong>Cupos disponibles:</strong> 12</li>
+                </ul>
+
+                <button type="button" class="boton-detalles">
+                  Ver detalles
+                </button>
+
+                <a href="preinscripcion.html?taller=Folclore%20argentino">
+                  Preinscribirme
+                </a>
+              </article>
+
+              <article
+                class="taller"
+                data-disciplina="danzas"
+                data-edad="18+"
+                data-concepto="La zamba es una danza folklórica de pareja que combina desplazamientos, giros y el juego expresivo del pañuelo, con movimientos que representan un encuentro de cortejo."
+              >
+                <img class="imagen-taller" src="../imagenesc01-10-26/zamba.jpg" alt="Taller de zamba" loading="lazy" decoding="async">
+                <h4>Zamba</h4>
+
+                <ul>
+                  <li><strong>Edad:</strong> 18 años o más</li>
+                  <li><strong>Día:</strong> Martes</li>
+                  <li><strong>Horario:</strong> 18:00 h</li>
+                  <li><strong>Duración:</strong> 1 hora</li>
+                  <li><strong>Cupos disponibles:</strong> 10</li>
+                </ul>
+
+                <button type="button" class="boton-detalles">
+                  Ver detalles
+                </button>
+
+                <a href="preinscripcion.html?taller=Zamba">
+                  Preinscribirme
+                </a>
+              </article>
+
+              <article
+                class="taller"
+                data-disciplina="danzas"
+                data-edad="7-12"
+                data-concepto="La chacarera es una danza y género musical folklórico de ritmo marcado y carácter alegre, tradicionalmente bailado en pareja y asociado a la cultura de Santiago del Estero."
+              >
+                <img class="imagen-taller" src="../imagenesc01-10-26/chacarera.jpg" alt="Taller de chacarera" loading="lazy" decoding="async">
+                <h4>Chacarera</h4>
+
+                <ul>
+                  <li><strong>Edad:</strong> 7 a 12 años</li>
+                  <li><strong>Día:</strong> Miércoles</li>
+                  <li><strong>Horario:</strong> 17:00 h</li>
+                  <li><strong>Duración:</strong> 1 hora</li>
+                  <li><strong>Cupos disponibles:</strong> 15</li>
+                </ul>
+
+                <button type="button" class="boton-detalles">
+                  Ver detalles
+                </button>
+
+                <a href="preinscripcion.html?taller=Chacarera">
+                  Preinscribirme
+                </a>
+              </article>
+
+              <article
+                class="taller"
+                data-disciplina="danzas"
+                data-edad="13-17"
+                data-concepto="El malambo es una danza folklórica centrada en el zapateo: combina ritmo, destreza y precisión en secuencias de pasos que tradicionalmente se realizan como un desafío entre bailarines."
+              >
+                <img class="imagen-taller" src="../imagenesc01-10-26/Malambo.jpg" alt="Taller de malambo" loading="lazy" decoding="async">
+                <h4>Malambo</h4>
+
+                <ul>
+                  <li><strong>Edad:</strong> 13 a 17 años</li>
+                  <li><strong>Día:</strong> Jueves</li>
+                  <li><strong>Horario:</strong> 18:00 h</li>
+                  <li><strong>Duración:</strong> 1 hora</li>
+                  <li><strong>Cupos disponibles:</strong> 8</li>
+                </ul>
+
+                <button type="button" class="boton-detalles">
+                  Ver detalles
+                </button>
+
+                <a href="preinscripcion.html?taller=Malambo">
+                  Preinscribirme
+                </a>
+              </article>
+
+            </div>
+          </section>
+
+          <section class="subcategoria" aria-labelledby="titulo-clasica">
+            <h3 id="titulo-clasica">Danza clásica</h3>
+
+            <div class="talleres">
+
+              <article
+                class="taller"
+                data-disciplina="danzas"
+                data-edad="4-6"
+                data-concepto="Un primer acercamiento al movimiento y la danza mediante juegos corporales, música y exploración del espacio, para desarrollar coordinación, ritmo y expresión."
+              >
+                <img class="imagen-taller" src="../imagenesc01-10-26/iniciacion%20a%20la%20%20danza.jpg" alt="Taller de iniciación a la danza" loading="lazy" decoding="async">
+                <h4>Iniciación a la danza</h4>
+
+                <ul>
+                  <li><strong>Edad:</strong> 4 a 6 años</li>
+                  <li><strong>Día:</strong> Lunes</li>
+                  <li><strong>Horario:</strong> 16:00 h</li>
+                  <li><strong>Duración:</strong> 1 hora</li>
+                  <li><strong>Cupos disponibles:</strong> 12</li>
+                </ul>
+
+                <button type="button" class="boton-detalles">
+                  Ver detalles
+                </button>
+
+                <a
+                  href="preinscripcion.html?taller=Iniciaci%C3%B3n%20a%20la%20danza"
+                >
+                  Preinscribirme
+                </a>
+              </article>
+
+              <article
+                class="taller"
+                data-disciplina="danzas"
+                data-edad="7-12"
+                data-concepto="Una introducción al ballet que trabaja posturas, equilibrio y pasos básicos, acompañados por música y ejercicios adecuados para la infancia."
+              >
+                <img class="imagen-taller" src="../imagenesc01-10-26/ballet%20infantil.jpg" alt="Taller de ballet infantil" loading="lazy" decoding="async">
+                <h4>Ballet infantil</h4>
+
+                <ul>
+                  <li><strong>Edad:</strong> 7 a 12 años</li>
+                  <li><strong>Día:</strong> Martes</li>
+                  <li><strong>Horario:</strong> 17:00 h</li>
+                  <li><strong>Duración:</strong> 1 hora</li>
+                  <li><strong>Cupos disponibles:</strong> 15</li>
+                </ul>
+
+                <button type="button" class="boton-detalles">
+                  Ver detalles
+                </button>
+
+                <a href="preinscripcion.html?taller=Ballet%20infantil">
+                  Preinscribirme
+                </a>
+              </article>
+
+              <article
+                class="taller"
+                data-disciplina="danzas"
+                data-edad="13-17"
+                data-concepto="Práctica de ballet para jóvenes que profundiza posiciones, secuencias y coordinación, y desarrolla fuerza, flexibilidad y expresividad en la danza clásica."
+              >
+                <img class="imagen-taller" src="../imagenesc01-10-26/ballet-juvenil.jpg" alt="Taller de ballet juvenil" loading="lazy" decoding="async">
+                <h4>Ballet juvenil</h4>
+
+                <ul>
+                  <li><strong>Edad:</strong> 13 a 17 años</li>
+                  <li><strong>Día:</strong> Miércoles</li>
+                  <li><strong>Horario:</strong> 18:00 h</li>
+                  <li><strong>Duración:</strong> 1 hora</li>
+                  <li><strong>Cupos disponibles:</strong> 10</li>
+                </ul>
+
+                <button type="button" class="boton-detalles">
+                  Ver detalles
+                </button>
+
+                <a href="preinscripcion.html?taller=Ballet%20juvenil">
+                  Preinscribirme
+                </a>
+              </article>
+
+              <article
+                class="taller"
+                data-disciplina="danzas"
+                data-edad="18+"
+                data-concepto="Entrenamiento sistemático de la técnica del ballet clásico, con trabajo de alineación, posiciones, equilibrio y control para fortalecer la precisión del movimiento."
+              >
+                <img class="imagen-taller" src="../imagenesc01-10-26/tecnica%20clasica.jpg" alt="Taller de técnica clásica" loading="lazy" decoding="async">
+                <h4>Técnica clásica</h4>
+
+                <ul>
+                  <li><strong>Edad:</strong> 18 años o más</li>
+                  <li><strong>Día:</strong> Jueves</li>
+                  <li><strong>Horario:</strong> 19:00 h</li>
+                  <li><strong>Duración:</strong> 1 hora</li>
+                  <li><strong>Cupos disponibles:</strong> 8</li>
+                </ul>
+
+                <button type="button" class="boton-detalles">
+                  Ver detalles
+                </button>
+
+                <a href="preinscripcion.html?taller=T%C3%A9cnica%20cl%C3%A1sica">
+                  Preinscribirme
+                </a>
+              </article>
+
+            </div>
+          </section>
+        </section>
+
+        <!-- ==================== MÚSICA ==================== -->
+
+        <section class="categoria" aria-labelledby="titulo-musica">
+          <h2 id="titulo-musica">Música</h2>
+
+          <p>
+            Talleres para aprender instrumentos, desarrollar la voz, explorar
+            el ritmo y participar de experiencias musicales colectivas.
+          </p>
+
+          <div class="talleres">
+
+            <article
+              class="taller"
+              data-disciplina="musica"
+              data-edad="7-12"
+              data-concepto="Aprendizaje inicial de la guitarra, instrumento de cuerdas usado para acompañar canciones y tocar melodías, con práctica de acordes, ritmo y escucha musical."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/guitarra.jpg" alt="Taller de guitarra" loading="lazy" decoding="async">
+              <h3>Guitarra</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 7 a 12 años</li>
+                <li><strong>Día:</strong> Lunes</li>
+                <li><strong>Horario:</strong> 16:00 h</li>
+                <li><strong>Duración:</strong> 1 hora</li>
+                <li><strong>Cupos disponibles:</strong> 10</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Guitarra">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="musica"
+              data-edad="13-17"
+              data-concepto="Exploración del piano y su teclado para interpretar melodías y acordes, conocer nociones musicales y desarrollar coordinación entre ambas manos."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/piano.jpg" alt="Taller de piano" loading="lazy" decoding="async">
+              <h3>Piano</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 13 a 17 años</li>
+                <li><strong>Día:</strong> Martes</li>
+                <li><strong>Horario:</strong> 17:00 h</li>
+                <li><strong>Duración:</strong> 1 hora</li>
+                <li><strong>Cupos disponibles:</strong> 8</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Piano">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="musica"
+              data-edad="7-12"
+              data-concepto="La percusión reúne instrumentos que producen sonido al golpearse, sacudirse o frotarse; en el taller se exploran ritmos, patrones y el trabajo musical en grupo."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/percusion.png" alt="Taller de percusión" loading="lazy" decoding="async">
+              <h3>Percusión</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 7 a 12 años</li>
+                <li><strong>Día:</strong> Jueves</li>
+                <li><strong>Horario:</strong> 17:00 h</li>
+                <li><strong>Duración:</strong> 1 hora</li>
+                <li><strong>Cupos disponibles:</strong> 12</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Percusi%C3%B3n">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="musica"
+              data-edad="18+"
+              data-concepto="El canto coral es una práctica colectiva en la que varias voces interpretan una obra, entrenando la escucha, la afinación y la armonía para crear un sonido común."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/coro.jpg" alt="Taller de coro" loading="lazy" decoding="async">
+              <h3>Coro</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 18 años o más</li>
+                <li><strong>Día:</strong> Jueves</li>
+                <li><strong>Horario:</strong> 19:00 h</li>
+                <li><strong>Duración:</strong> 1 hora y 30 minutos</li>
+                <li><strong>Cupos disponibles:</strong> 20</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Coro">
+                Preinscribirme
+              </a>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ==================== TEATRO ==================== -->
+
+        <section class="categoria" aria-labelledby="titulo-teatro">
+          <h2 id="titulo-teatro">Teatro</h2>
+
+          <p>
+            Espacios para explorar actuación, juego escénico, expresión corporal,
+            dramaturgia y creación colectiva.
+          </p>
+
+          <div class="talleres">
+
+            <article
+              class="taller"
+              data-disciplina="teatro"
+              data-edad="4-6"
+              data-concepto="Un primer acercamiento al teatro a través del juego dramático, la imaginación y la expresión corporal y vocal, explorando personajes y situaciones sencillas."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/iniciacion%20teatral.jpg" alt="Taller de iniciación teatral" loading="lazy" decoding="async">
+              <h3>Iniciación teatral</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 4 a 6 años</li>
+                <li><strong>Día:</strong> Lunes</li>
+                <li><strong>Horario:</strong> 16:00 h</li>
+                <li><strong>Duración:</strong> 1 hora</li>
+                <li><strong>Cupos disponibles:</strong> 12</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Iniciaci%C3%B3n%20teatral">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="teatro"
+              data-edad="7-12"
+              data-concepto="Un espacio para crear e interpretar historias mediante juegos teatrales, personajes y escenas, desarrollando imaginación, expresión y colaboración."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/teatro%20infantil.jpg" alt="Taller de teatro infantil" loading="lazy" decoding="async">
+              <h3>Teatro infantil</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 7 a 12 años</li>
+                <li><strong>Día:</strong> Martes</li>
+                <li><strong>Horario:</strong> 17:00 h</li>
+                <li><strong>Duración:</strong> 1 hora</li>
+                <li><strong>Cupos disponibles:</strong> 15</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Teatro%20infantil">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="teatro"
+              data-edad="13-17"
+              data-concepto="Práctica teatral para jóvenes que combina improvisación, creación de personajes y escenas, y trabajo grupal para comunicar ideas a través de la actuación."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/teatro%20juvenil.jpg" alt="Taller de teatro juvenil" loading="lazy" decoding="async">
+              <h3>Teatro juvenil</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 13 a 17 años</li>
+                <li><strong>Día:</strong> Miércoles</li>
+                <li><strong>Horario:</strong> 18:00 h</li>
+                <li><strong>Duración:</strong> 1 hora y 30 minutos</li>
+                <li><strong>Cupos disponibles:</strong> 15</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Teatro%20juvenil">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="teatro"
+              data-edad="18+"
+              data-concepto="Un espacio de formación y creación escénica para personas adultas, con ejercicios de actuación, expresión corporal y vocal, e interpretación de situaciones y textos."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/teatro%20adulto.jpg" alt="Taller de teatro para adultos" loading="lazy" decoding="async">
+              <h3>Teatro para adultos</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 18 años o más</li>
+                <li><strong>Día:</strong> Jueves</li>
+                <li><strong>Horario:</strong> 19:00 h</li>
+                <li><strong>Duración:</strong> 1 hora y 30 minutos</li>
+                <li><strong>Cupos disponibles:</strong> 15</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Teatro%20para%20adultos">
+                Preinscribirme
+              </a>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ==================== ARTES VISUALES ==================== -->
+
+        <section class="categoria" aria-labelledby="titulo-artes-visuales">
+          <h2 id="titulo-artes-visuales">Artes visuales</h2>
+
+          <p>
+            Talleres para experimentar con color, dibujo, materiales, imagen,
+            técnicas manuales y recursos digitales.
+          </p>
+
+          <div class="talleres">
+
+            <article
+              class="taller"
+              data-disciplina="pintura"
+              data-edad="4-6"
+              data-concepto="Primeras experiencias con la pintura para explorar colores, herramientas y materiales, y expresar ideas mediante composiciones libres y juegos visuales."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/pintura%20inicial.jpg" alt="Taller de pintura inicial" loading="lazy" decoding="async">
+              <h3>Pintura inicial</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 4 a 6 años</li>
+                <li><strong>Día:</strong> Lunes</li>
+                <li><strong>Horario:</strong> 16:00 h</li>
+                <li><strong>Duración:</strong> 1 hora</li>
+                <li><strong>Cupos disponibles:</strong> 12</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Pintura%20inicial">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="pintura"
+              data-edad="7-12"
+              data-concepto="Un taller para experimentar con técnicas y materiales de pintura, observar el entorno y desarrollar la creatividad en imágenes propias."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/pintura%20infantil.jpg" alt="Taller de pintura infantil" loading="lazy" decoding="async">
+              <h3>Pintura infantil</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 7 a 12 años</li>
+                <li><strong>Día:</strong> Martes</li>
+                <li><strong>Horario:</strong> 17:00 h</li>
+                <li><strong>Duración:</strong> 1 hora</li>
+                <li><strong>Cupos disponibles:</strong> 15</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Pintura%20infantil">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="dibujo"
+              data-edad="7-12"
+              data-concepto="Introducción al dibujo mediante líneas, formas y observación, para representar ideas y objetos y adquirir recursos básicos de expresión visual."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/dibujo%20infantil.jpeg" alt="Taller de dibujo infantil" loading="lazy" decoding="async">
+              <h3>Dibujo infantil</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 7 a 12 años</li>
+                <li><strong>Día:</strong> Miércoles</li>
+                <li><strong>Horario:</strong> 16:00 h</li>
+                <li><strong>Duración:</strong> 1 hora</li>
+                <li><strong>Cupos disponibles:</strong> 15</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Dibujo%20infantil">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="fotografia"
+              data-edad="13-17"
+              data-concepto="Introducción a la fotografía y a la creación de imágenes: se exploran encuadre, luz y enfoque para contar historias y comunicar una mirada propia."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/fotografia%20inicial.jpg" alt="Taller de fotografía inicial" loading="lazy" decoding="async">
+              <h3>Fotografía inicial</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 13 a 17 años</li>
+                <li><strong>Día:</strong> Lunes</li>
+                <li><strong>Horario:</strong> 18:00 h</li>
+                <li><strong>Duración:</strong> 1 hora y 30 minutos</li>
+                <li><strong>Cupos disponibles:</strong> 12</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Fotograf%C3%ADa%20inicial">
+                Preinscribirme
+              </a>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- ==================== ARTES APLICADAS ==================== -->
+
+        <section class="categoria" aria-labelledby="titulo-artes-aplicadas">
+          <h2 id="titulo-artes-aplicadas">Artes aplicadas</h2>
+
+          <p>
+            Talleres para crear con materiales, técnicas artesanales y proyectos
+            de diseño vinculados a la producción cultural.
+          </p>
+
+          <div class="talleres">
+
+            <article
+              class="taller"
+              data-disciplina="artes-aplicadas"
+              data-edad="7-12"
+              data-concepto="Exploración de la arcilla como material plástico para modelar formas, desarrollar habilidades manuales y crear objetos mediante técnicas básicas de cerámica."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/ceramica%20inicial.jpg" alt="Taller de cerámica" loading="lazy" decoding="async">
+              <h3>Cerámica</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 7 a 12 años</li>
+                <li><strong>Día:</strong> Lunes</li>
+                <li><strong>Horario:</strong> 16:00 h</li>
+                <li><strong>Duración:</strong> 1 hora y 30 minutos</li>
+                <li><strong>Cupos disponibles:</strong> 12</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Cer%C3%A1mica">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="artes-aplicadas"
+              data-edad="13-17"
+              data-concepto="Un acercamiento a las técnicas textiles para trabajar con hilos, fibras y telas, crear piezas propias y conocer distintas formas de construcción y diseño."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/textil.jpg" alt="Taller de textil" loading="lazy" decoding="async">
+              <h3>Textil</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 13 a 17 años</li>
+                <li><strong>Día:</strong> Martes</li>
+                <li><strong>Horario:</strong> 17:00 h</li>
+                <li><strong>Duración:</strong> 1 hora y 30 minutos</li>
+                <li><strong>Cupos disponibles:</strong> 10</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Textil">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="artes-aplicadas"
+              data-edad="18+"
+              data-concepto="Creación de objetos artesanales mediante materiales y técnicas manuales, combinando diseño, creatividad y saberes de producción cultural."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/artesania.webp" alt="Taller de artesanías" loading="lazy" decoding="async">
+              <h3>Artesanías</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 18 años o más</li>
+                <li><strong>Día:</strong> Miércoles</li>
+                <li><strong>Horario:</strong> 18:00 h</li>
+                <li><strong>Duración:</strong> 2 horas</li>
+                <li><strong>Cupos disponibles:</strong> 10</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a href="preinscripcion.html?taller=Artesan%C3%ADas">
+                Preinscribirme
+              </a>
+            </article>
+
+            <article
+              class="taller"
+              data-disciplina="artes-aplicadas"
+              data-edad="7-12"
+              data-concepto="Creación artística a partir de materiales reutilizados, para imaginar nuevos usos, experimentar con formas y colores y reflexionar sobre el cuidado del ambiente."
+            >
+              <img class="imagen-taller" src="../imagenesc01-10-26/taller%20de%20arte%20y%20reciclaje.jpg" alt="Taller de arte y reciclaje" loading="lazy" decoding="async">
+              <h3>Reciclaje artístico</h3>
+
+              <ul>
+                <li><strong>Edad:</strong> 7 a 12 años</li>
+                <li><strong>Día:</strong> Miércoles</li>
+                <li><strong>Horario:</strong> 16:00 h</li>
+                <li><strong>Duración:</strong> 1 hora</li>
+                <li><strong>Cupos disponibles:</strong> 15</li>
+              </ul>
+
+              <button type="button" class="boton-detalles">
+                Ver detalles
+              </button>
+
+              <a
+                href="preinscripcion.html?taller=Reciclaje%20art%C3%ADstico"
+              >
+                Preinscribirme
+              </a>
+            </article>
+
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <div class="contenedor">
+      <p id="sin-resultados" hidden aria-live="polite">
+        No se encontraron talleres que coincidan con los filtros seleccionados.
+        Probá con otra disciplina o rango de edad.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ==================== MODAL ==================== -->
+
+  <dialog id="modal-detalles" aria-labelledby="titulo-modal-detalles">
+    <div class="modal-contenido">
+      <button
+        id="cerrar-modal-detalles"
+        class="boton-cerrar-modal"
+        type="button"
+        aria-label="Cerrar detalles del taller"
+      >
+        ×
+      </button>
+
+      <h2 id="titulo-modal-detalles">Detalle del taller</h2>
+
+      <div id="contenido-modal-detalles"></div>
+
+      <a
+        id="enlace-preinscripcion-modal"
+        class="boton-preinscripcion-modal"
+        href="preinscripcion.html"
+      >
+        Preinscribirme
+      </a>
+    </div>
+  </dialog>
+
+  <!-- ==================== FOOTER ==================== -->
+
+  <footer>
+    <div class="contenedor-footer">
+      <p>
+        &copy; 2026 CEMEPA — Centro Municipal de Educación por el Arte.
+        Caleta Olivia, Santa Cruz, Argentina.
+      </p>
+
+      <div class="redes-sociales" aria-label="Redes sociales">
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://x.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/talleres.js"></script>
+</body>
+</html>

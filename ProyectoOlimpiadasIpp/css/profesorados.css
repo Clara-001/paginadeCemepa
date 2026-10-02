@@ -1,0 +1,517 @@
+/* ==================================
+   CEMEPA - PROFESORADOS
+   ================================== */
+
+:root {
+  --color-principal: #055a51;
+  --color-principal-oscuro: #033e38;
+  --color-secundario: #d34e24;
+  --color-acento: #f7f052;
+  --color-acento-naranja: #f28123;
+
+  --color-fondo: #281e0d;
+  --color-fondo-suave: #3b2c14;
+  --color-superficie: #fff8e7;
+  --color-superficie-secundaria: #f9e5b5;
+
+  --color-texto: #281e0d;
+  --color-texto-suave: #5f4b26;
+  --color-borde: #d34e24;
+
+  --radio-pequeno: 0.5rem;
+  --radio-medio: 0.85rem;
+  --radio-grande: 1.2rem;
+
+  --sombra-suave: 0 0.3rem 0.9rem rgb(0 0 0 / 22%);
+  --sombra-tarjeta: 0 0.75rem 1.8rem rgb(0 0 0 / 35%);
+
+  --ancho-maximo: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.contenedor,
+.contenedor-header,
+.contenedor-footer {
+  width: min(92%, var(--ancho-maximo));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-principal);
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: clamp(2.1rem, 5vw, 3.5rem);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: clamp(1.75rem, 3vw, 2.4rem);
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.8rem);
+}
+
+h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* HEADER */
+
+.encabezado-principal {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-principal);
+  border-bottom: 0.25rem solid var(--color-acento);
+  box-shadow: 0 0.2rem 1rem rgb(0 0 0 / 35%);
+}
+
+.contenedor-header {
+  display: flex;
+  min-height: 5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.marca-cemepa {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-acento);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.marca-cemepa strong {
+  font-size: 1.4rem;
+  letter-spacing: 0.09em;
+}
+
+.marca-cemepa span {
+  color: #fff8e7;
+}
+
+.encabezado-principal nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+.encabezado-principal nav a {
+  color: #fff8e7;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.encabezado-principal nav a:hover,
+.encabezado-principal nav a:focus-visible,
+.encabezado-principal nav a[aria-current="page"] {
+  color: var(--color-acento);
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.boton-menu {
+  display: none;
+  padding: 0.55rem 0.85rem;
+  color: var(--color-principal);
+  background-color: var(--color-acento);
+  border: 1px solid var(--color-acento);
+  border-radius: var(--radio-pequeno);
+  font-weight: 700;
+}
+
+/* PRESENTACIÓN */
+
+.presentacion-profesorados {
+  padding: 4.5rem 0;
+  color: #fff8e7;
+  background: linear-gradient(
+    135deg,
+    rgb(5 90 81 / 96%),
+    rgb(40 30 13 / 94%)
+  );
+  border-bottom: 0.3rem solid var(--color-secundario);
+}
+
+.presentacion-profesorados h1 {
+  color: var(--color-acento);
+}
+
+.presentacion-profesorados p {
+  max-width: 54rem;
+  font-size: 1.1rem;
+}
+
+.etiqueta-presentacion {
+  margin-bottom: 0.65rem;
+  color: var(--color-acento-naranja);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+/* CARACTERÍSTICAS */
+
+.informacion-general {
+  padding: 3.5rem 0;
+  background-color: #fff8e7;
+}
+
+.caracteristicas-formacion {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.caracteristicas-formacion article {
+  padding: 1.35rem;
+  background-color: var(--color-superficie-secundaria);
+  border: 2px solid var(--color-principal);
+  border-top: 0.35rem solid var(--color-secundario);
+  border-radius: var(--radio-medio);
+  box-shadow: var(--sombra-suave);
+}
+
+.caracteristicas-formacion h3 {
+  color: var(--color-secundario);
+}
+
+.caracteristicas-formacion p {
+  margin-bottom: 0;
+  color: var(--color-texto-suave);
+}
+
+/* PROFESORADOS */
+
+.seccion-profesorados {
+  padding: 3.5rem 0;
+  background-color: var(--color-fondo);
+}
+
+.seccion-profesorados > .contenedor > h2 {
+  color: var(--color-acento);
+}
+
+.profesorado-completo {
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-principal);
+  border-radius: var(--radio-grande);
+  box-shadow: var(--sombra-suave);
+}
+
+.encabezado-profesorado {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-secundario);
+}
+
+.encabezado-profesorado h3 {
+  color: var(--color-secundario);
+}
+
+.encabezado-profesorado p:last-child {
+  max-width: 50rem;
+  margin-bottom: 0;
+  color: var(--color-texto-suave);
+}
+
+.etiqueta-profesorado {
+  margin-bottom: 0.5rem;
+  color: var(--color-principal);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.profesorado-completo details {
+  margin-top: 1rem;
+  overflow: hidden;
+  border: 1px solid var(--color-principal);
+  border-radius: var(--radio-pequeno);
+}
+
+.profesorado-completo summary {
+  padding: 0.85rem 1rem;
+  color: #fff8e7;
+  background-color: var(--color-principal);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.profesorado-completo summary:hover,
+.profesorado-completo summary:focus-visible {
+  color: var(--color-principal);
+  background-color: var(--color-acento);
+}
+
+.lista-contenidos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem 1.5rem;
+  margin: 1rem;
+  padding-left: 1.25rem;
+}
+
+.plan-estudios {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.plan-estudios article {
+  padding: 1rem;
+  background-color: var(--color-superficie-secundaria);
+  border-left: 0.3rem solid var(--color-secundario);
+  border-radius: var(--radio-pequeno);
+}
+
+.plan-estudios h4 {
+  color: var(--color-principal);
+}
+
+.plan-estudios ul {
+  margin-bottom: 0;
+  padding-left: 1.1rem;
+}
+
+.texto-details {
+  margin: 1rem;
+}
+
+.boton-preinscripcion {
+  display: inline-flex;
+  min-height: 2.8rem;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1rem;
+  align-items: center;
+  justify-content: center;
+  color: #fff8e7;
+  background-color: var(--color-secundario);
+  border: 2px solid var(--color-secundario);
+  border-radius: var(--radio-pequeno);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.boton-preinscripcion:hover,
+.boton-preinscripcion:focus-visible {
+  color: var(--color-principal);
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+/* REQUISITOS */
+
+.requisitos {
+  padding: 3.5rem 0;
+  background-color: var(--color-principal);
+}
+
+.requisitos h2 {
+  color: var(--color-acento);
+}
+
+.requisitos-contenido {
+  padding: 1.5rem;
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-acento);
+  border-radius: var(--radio-medio);
+  box-shadow: var(--sombra-suave);
+}
+
+.requisitos-contenido ul {
+  margin-top: 0;
+  padding-left: 1.25rem;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 2rem 0;
+  color: #fff8e7;
+  background-color: var(--color-principal);
+  border-top: 0.25rem solid var(--color-secundario);
+}
+
+.contenedor-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contenedor-footer p {
+  margin: 0;
+}
+
+.redes-sociales {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+}
+
+.redes-sociales a {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  color: #fff8e7;
+  border: 1px solid rgb(255 248 231 / 65%);
+  border-radius: 50%;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.redes-sociales a:hover,
+.redes-sociales a:focus-visible {
+  color: var(--color-principal);
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+/* RESPONSIVE */
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 0.2rem solid var(--color-acento);
+  outline-offset: 0.2rem;
+}
+
+@media (max-width: 900px) {
+  .caracteristicas-formacion,
+  .plan-estudios {
+    grid-template-columns: 1fr;
+  }
+
+  .encabezado-principal nav a {
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .contenedor-header {
+    position: relative;
+    min-height: 4.8rem;
+  }
+
+  .marca-cemepa span {
+    display: none;
+  }
+
+  .boton-menu {
+    display: inline-block;
+  }
+
+  .encabezado-principal nav {
+    position: absolute;
+    top: 4.8rem;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 1rem 4%;
+    background-color: var(--color-principal);
+    box-shadow: var(--sombra-tarjeta);
+  }
+
+  .encabezado-principal nav.abierto {
+    display: block;
+  }
+
+  .encabezado-principal nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .encabezado-principal nav a {
+    display: block;
+    padding: 0.7rem 0;
+    color: #fff8e7;
+    border-bottom: 1px solid rgb(247 240 82 / 40%);
+  }
+
+  .presentacion-profesorados {
+    padding: 3.5rem 0 3rem;
+  }
+
+  .profesorado-completo {
+    padding: 1.25rem;
+  }
+
+  .lista-contenidos {
+    grid-template-columns: 1fr;
+  }
+
+  .contenedor-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .redes-sociales {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .boton-preinscripcion {
+    width: 100%;
+  }
+}

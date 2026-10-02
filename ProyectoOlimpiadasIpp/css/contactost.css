@@ -1,0 +1,443 @@
+/* ==================================
+   CEMEPA - CONTACTO
+   Estilos originales + menú principal
+   ================================== */
+
+:root {
+  --crema: #fbf3e1;
+  --amarillo: #f9e64b;
+  --verde-azulado: #3f7a78;
+  --marron: #3a1d0c;
+  --naranja: #e2521f;
+  --blanco: #ffffff;
+  --texto: #2a1608;
+}
+
+/* ==================================
+   ESTILOS GENERALES
+   ================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  color: var(--texto);
+  background: var(--crema);
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.4;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* ==================================
+   MENÚ PRINCIPAL
+   ================================== */
+
+.encabezado-principal {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--verde-azulado);
+  border-bottom: 0.25rem solid var(--amarillo);
+  box-shadow: 0 0.2rem 1rem rgb(0 0 0 / 35%);
+}
+
+.contenedor-header {
+  display: flex;
+  width: min(92%, 1200px);
+  min-height: 5rem;
+  margin-right: auto;
+  margin-left: auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.marca-cemepa {
+  display: flex;
+  flex-direction: column;
+  color: var(--amarillo);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.marca-cemepa strong {
+  font-size: 1.4rem;
+  letter-spacing: 0.09em;
+}
+
+.marca-cemepa span {
+  color: var(--blanco);
+}
+
+.encabezado-principal nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+.encabezado-principal nav a {
+  color: var(--blanco);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.encabezado-principal nav a:hover,
+.encabezado-principal nav a:focus-visible,
+.encabezado-principal nav a[aria-current="page"] {
+  color: var(--amarillo);
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+
+.boton-menu {
+  display: none;
+  padding: 0.55rem 0.85rem;
+  color: var(--verde-azulado);
+  background-color: var(--amarillo);
+  border: 1px solid var(--amarillo);
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ==================================
+   CONTENIDO DE CONTACTO
+   ================================== */
+
+main {
+  display: grid;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
+  gap: 22px;
+}
+
+h2 {
+  margin: 0 0 18px;
+  color: var(--marron);
+  font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+  font-weight: 800;
+  text-align: center;
+}
+
+/* Información institucional */
+
+.info {
+  padding: 24px 28px 28px;
+  background: var(--amarillo);
+  border-radius: 14px;
+}
+
+.info-grid {
+  display: grid;
+  max-width: 640px;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 32px;
+}
+
+.dato {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dato a {
+  color: inherit;
+}
+
+.icono {
+  display: grid;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  place-items: center;
+  background: var(--naranja);
+}
+
+.icono svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--blanco);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+/* Formulario */
+
+.preinscripcion {
+  padding: 24px 28px 28px;
+  background: #fdf7ea;
+  border-radius: 14px;
+}
+
+form {
+  display: grid;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 18px 20px 20px;
+  background: var(--blanco);
+  border: 1.5px solid var(--marron);
+  border-radius: 10px;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.campo.completo {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 0.95rem;
+}
+
+label span {
+  color: var(--naranja);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  color: var(--texto);
+  background: var(--blanco);
+  border: 1.5px solid var(--marron);
+  border-radius: 8px;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+.pie a:focus-visible,
+.encabezado-principal a:focus-visible {
+  outline: 3px solid var(--verde-azulado);
+  outline-offset: 2px;
+}
+
+.acciones {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.acciones button {
+  padding: 10px 30px;
+  color: var(--blanco);
+  background: var(--naranja);
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.acciones button:hover {
+  background: #c8431a;
+}
+
+#estado {
+  margin: 0;
+  color: var(--verde-azulado);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Validación */
+
+.error {
+  min-height: 1.1em;
+  color: #c0392b;
+  font-size: 0.85rem;
+}
+
+input.invalido,
+textarea.invalido {
+  background: #fff5f4;
+  border-color: #c0392b;
+}
+
+/* ==================================
+   FOOTER CON EL MISMO VERDE DEL HEADER
+   ================================== */
+
+.pie {
+  padding: 26px 20px 30px;
+  color: var(--blanco);
+  background: var(--verde-azulado);
+  text-align: center;
+}
+
+.pie ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  gap: 14px 34px;
+  list-style: none;
+}
+
+.pie a {
+  display: inline-flex;
+  color: var(--blanco);
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.pie a:hover {
+  text-decoration: underline;
+}
+
+.pie svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--blanco);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+/* Redes sociales */
+
+.redes {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 14px;
+}
+
+.redes a {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--blanco);
+  border: 1px solid rgb(255 255 255 / 65%);
+  border-radius: 50%;
+  place-items: center;
+  text-decoration: none;
+}
+
+.redes a:hover,
+.redes a:focus-visible {
+  color: var(--verde-azulado);
+  background-color: var(--amarillo);
+  border-color: var(--amarillo);
+}
+
+/* ==================================
+   DISEÑO RESPONSIVE
+   ================================== */
+
+@media (max-width: 900px) {
+  .encabezado-principal nav a {
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .contenedor-header {
+    position: relative;
+    min-height: 4.8rem;
+  }
+
+  .marca-cemepa span {
+    display: none;
+  }
+
+  .boton-menu {
+    display: inline-block;
+  }
+
+  .encabezado-principal nav {
+    position: absolute;
+    top: 4.8rem;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 1rem 4%;
+    background-color: var(--verde-azulado);
+    box-shadow: 0 0.75rem 1.8rem rgb(0 0 0 / 35%);
+  }
+
+  .encabezado-principal nav.abierto {
+    display: block;
+  }
+
+  .encabezado-principal nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .encabezado-principal nav a {
+    display: block;
+    padding: 0.7rem 0;
+    color: var(--blanco);
+    border-bottom: 1px solid rgb(249 230 75 / 40%);
+  }
+}
+
+@media (max-width: 640px) {
+  .info-grid,
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .info,
+  .preinscripcion {
+    padding: 20px 16px 22px;
+  }
+
+  .acciones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .acciones button {
+    width: 100%;
+  }
+
+  #estado {
+    text-align: center;
+  }
+
+  .pie ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+}

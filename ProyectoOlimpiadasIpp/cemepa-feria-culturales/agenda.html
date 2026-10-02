@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Agenda cultural del CEMEPA de Caleta Olivia: ferias, muestras, música, danza, teatro y actividades artísticas."
+  >
+
+  <title>Agenda cultural | CEMEPA Caleta Olivia</title>
+
+  <link rel="stylesheet" href="../css/agenda.css">
+  <link rel="stylesheet" href="../css/identidad-cemepa.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <header class="encabezado-principal">
+    <div class="contenedor-header">
+      <a class="marca-cemepa" href="index.html">
+        <img src="../imagenesc01-10-26/Logo%20Cemepa.jpg" alt="Logo del CEMEPA">
+        <div class="texto-marca">
+          <strong>CEMEPA</strong>
+          <span>Centro Municipal de Educación por el Arte</span>
+        </div>
+      </a>
+
+      <button
+        class="boton-menu"
+        id="boton-menu"
+        type="button"
+        aria-label="Abrir menú de navegación"
+        aria-controls="menu-principal"
+        aria-expanded="false"
+      >
+        Menú
+      </button>
+
+      <nav id="menu-principal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="talleres.html">Talleres</a></li>
+          <li>
+            <a href="agenda.html" aria-current="page">
+              Agenda y ferias
+            </a>
+          </li>
+          <li><a href="profesorados.html">Formación profesional</a></li>
+          <li><a href="preinscripcion.html">Preinscripción</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="presentacion-agenda" aria-labelledby="titulo-agenda">
+      <div class="contenedor">
+        <p class="etiqueta-presentacion">Cultura, arte y comunidad</p>
+
+        <h1 id="titulo-agenda">Agenda cultural y ferias</h1>
+
+        <p>
+          Conocé las próximas ferias, muestras, conciertos, presentaciones
+          teatrales, encuentros de danza y actividades abiertas del CEMEPA.
+        </p>
+
+        <p>
+          Todas las propuestas buscan promover el acceso al arte, la
+          participación comunitaria y la difusión de producciones locales.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion-filtros" aria-labelledby="titulo-filtros">
+      <div class="contenedor">
+        <h2 id="titulo-filtros">Buscá un evento</h2>
+
+        <div class="filtros-eventos">
+          <div class="campo-filtro">
+            <label for="tipo-evento">Tipo de actividad</label>
+
+            <select id="tipo-evento" name="tipo-evento">
+              <option value="todas">Todas las actividades</option>
+              <option value="feria">Ferias</option>
+              <option value="muestra">Muestras</option>
+              <option value="musica">Música</option>
+              <option value="danza">Danza</option>
+              <option value="teatro">Teatro</option>
+              <option value="taller">Talleres abiertos</option>
+            </select>
+          </div>
+
+          <div class="campo-filtro campo-boton">
+            <button id="limpiar-filtro-eventos" type="button">
+              Ver toda la agenda
+            </button>
+          </div>
+        </div>
+
+        <p id="resultado-eventos" aria-live="polite">
+          Se muestran todas las actividades próximas.
+        </p>
+      </div>
+    </section>
+
+    <section class="agenda-eventos" aria-labelledby="titulo-proximos">
+      <div class="contenedor">
+        <h2 id="titulo-proximos">Próximas actividades</h2>
+
+        <div class="lista-eventos">
+
+          <article class="evento" data-tipo="feria">
+            <p class="fecha-evento">
+              <time datetime="2026-10-18T15:00">
+                18 de octubre · 15:00 h
+              </time>
+            </p>
+
+            <h3>Feria Cultural Patagónica</h3>
+
+            <p>
+              Encuentro de artesanos, emprendedores, artistas locales,
+              gastronomía regional y propuestas culturales para toda la familia.
+            </p>
+
+            <ul>
+              <li><strong>Lugar:</strong> Patio central del CEMEPA</li>
+              <li><strong>Entrada:</strong> Libre y gratuita</li>
+              <li><strong>Tipo:</strong> Feria cultural</li>
+            </ul>
+
+            <button class="boton-detalles-evento" type="button">
+              Ver detalles
+            </button>
+          </article>
+
+          <article class="evento" data-tipo="muestra">
+            <p class="fecha-evento">
+              <time datetime="2026-10-24T19:00">
+                24 de octubre · 19:00 h
+              </time>
+            </p>
+
+            <h3>Muestra anual de Artes Visuales</h3>
+
+            <p>
+              Exposición de trabajos realizados por estudiantes de pintura,
+              dibujo, fotografía, grabado, ilustración y animación.
+            </p>
+
+            <ul>
+              <li><strong>Lugar:</strong> Sala de exposiciones</li>
+              <li><strong>Entrada:</strong> Libre y gratuita</li>
+              <li><strong>Tipo:</strong> Muestra artística</li>
+            </ul>
+
+            <button class="boton-detalles-evento" type="button">
+              Ver detalles
+            </button>
+          </article>
+
+          <article class="evento" data-tipo="danza">
+            <p class="fecha-evento">
+              <time datetime="2026-11-01T17:00">
+                1 de noviembre · 17:00 h
+              </time>
+            </p>
+
+            <h3>Encuentro de Danzas Folclóricas</h3>
+
+            <p>
+              Presentación de talleres de folclore argentino, zamba,
+              chacarera, malambo y danzas regionales.
+            </p>
+
+            <ul>
+              <li><strong>Lugar:</strong> Auditorio CEMEPA</li>
+              <li><strong>Entrada:</strong> Libre y gratuita</li>
+              <li><strong>Tipo:</strong> Danza</li>
+            </ul>
+
+            <button class="boton-detalles-evento" type="button">
+              Ver detalles
+            </button>
+          </article>
+
+          <article class="evento" data-tipo="musica">
+            <p class="fecha-evento">
+              <time datetime="2026-11-08T20:00">
+                8 de noviembre · 20:00 h
+              </time>
+            </p>
+
+            <h3>Concierto de ensambles</h3>
+
+            <p>
+              Presentación de grupos de guitarra, piano, percusión,
+              canto grupal, coro y ensambles instrumentales.
+            </p>
+
+            <ul>
+              <li><strong>Lugar:</strong> Auditorio CEMEPA</li>
+              <li><strong>Entrada:</strong> Libre y gratuita</li>
+              <li><strong>Tipo:</strong> Música</li>
+            </ul>
+
+            <button class="boton-detalles-evento" type="button">
+              Ver detalles
+            </button>
+          </article>
+
+          <article class="evento" data-tipo="teatro">
+            <p class="fecha-evento">
+              <time datetime="2026-11-15T18:00">
+                15 de noviembre · 18:00 h
+              </time>
+            </p>
+
+            <h3>Muestra de Teatro Juvenil</h3>
+
+            <p>
+              Presentación escénica de estudiantes del taller de teatro
+              juvenil, improvisación y expresión corporal.
+            </p>
+
+            <ul>
+              <li><strong>Lugar:</strong> Auditorio CEMEPA</li>
+              <li><strong>Entrada:</strong> Libre y gratuita</li>
+              <li><strong>Tipo:</strong> Teatro</li>
+            </ul>
+
+            <button class="boton-detalles-evento" type="button">
+              Ver detalles
+            </button>
+          </article>
+
+          <article class="evento" data-tipo="feria">
+            <p class="fecha-evento">
+              <time datetime="2026-11-22T14:00">
+                22 de noviembre · 14:00 h
+              </time>
+            </p>
+
+            <h3>Feria de Artesanías y Diseño</h3>
+
+            <p>
+              Espacio de exposición y venta de producciones de cerámica,
+              textil, encuadernación, diseño, decoración y reciclaje artístico.
+            </p>
+
+            <ul>
+              <li><strong>Lugar:</strong> Patio central del CEMEPA</li>
+              <li><strong>Entrada:</strong> Libre y gratuita</li>
+              <li><strong>Tipo:</strong> Feria cultural</li>
+            </ul>
+
+            <button class="boton-detalles-evento" type="button">
+              Ver detalles
+            </button>
+          </article>
+
+          <article class="evento" data-tipo="taller">
+            <p class="fecha-evento">
+              <time datetime="2026-11-29T16:00">
+                29 de noviembre · 16:00 h
+              </time>
+            </p>
+
+            <h3>Jornada abierta de talleres</h3>
+
+            <p>
+              Clases demostrativas y espacios participativos para conocer
+              las propuestas de talleres antes de la próxima inscripción.
+            </p>
+
+            <ul>
+              <li><strong>Lugar:</strong> Aulas y espacios del CEMEPA</li>
+              <li><strong>Entrada:</strong> Libre y gratuita</li>
+              <li><strong>Tipo:</strong> Talleres abiertos</li>
+            </ul>
+
+            <button class="boton-detalles-evento" type="button">
+              Ver detalles
+            </button>
+          </article>
+
+        </div>
+
+        <p id="sin-eventos" hidden aria-live="polite">
+          No se encontraron actividades para el tipo seleccionado.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <dialog id="modal-evento" aria-labelledby="titulo-modal-evento">
+    <div class="modal-contenido">
+      <button
+        id="cerrar-modal-evento"
+        class="boton-cerrar-modal"
+        type="button"
+        aria-label="Cerrar detalles del evento"
+      >
+        ×
+      </button>
+
+      <h2 id="titulo-modal-evento">Detalle del evento</h2>
+
+      <div id="contenido-modal-evento"></div>
+    </div>
+  </dialog>
+
+  <footer>
+    <div class="contenedor-footer">
+      <p>
+        &copy; 2026 CEMEPA — Centro Municipal de Educación por el Arte.
+        Caleta Olivia, Santa Cruz, Argentina.
+      </p>
+
+      <div class="redes-sociales" aria-label="Redes sociales">
+        <a
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a
+          href="https://x.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a
+          href="https://www.tiktok.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="YouTube"
+        >
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/agenda.js"></script>
+</body>
+</html>
